@@ -1,13 +1,17 @@
 @mixin headerbar_buttons($bg, $fg, $br)
 {
-  @include normal_buttons($bg, $fg, $br);
+  //@include normal_buttons($bg, $fg, $br);
+  padding: 0px;
 }
 
 @mixin headerbar() {
+
+
   headerbar {
-    padding: 4px 8px;
     min-height: 30px;
+    padding: 0 4px 0 4px;
     color: $titlebar_fg_color;
+    border-radius: $csd_radius $csd_radius 0 0;
     background-color: $titlebar_bg_color;
     background-size: 1px 100%;
     background-image: url('assets/titlebar-focused-middle.png');
@@ -16,6 +20,28 @@
       color: $unfocused_fg_color;
       background-color: $unfocused_bg_color;
       background-image: url('assets/titlebar-unfocused-middle.png');
+    }
+
+    &.titlebar {
+      border-radius: $csd_radius $csd_radius 0 0;
+    }
+
+    &.maximized,
+    .maximized &,
+    &.fullscreen,
+    .fullscreen & {
+      border-radius: 0;
+    }
+
+    separator {
+      -GtkWidget-window-dragging: true;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      background-color: #d4d2c2;
+
+      &:backdrop {
+        background-color: #dad8c8;
+      }
     }
 
     // Fixes split headerbars
@@ -64,20 +90,79 @@
     }
 
     entry { padding: 6px 8px; }
-    &.titlebar, .titlebar & { border-radius: $csd_radius $csd_radius 0px 0px; }
-    
+
+
+    .image-button,
+    .image-button:hover,
+    .image-button:active,
+    .image-button:backdrop,
+    .image-button:backdrop:hover
+    .image-button:disabled,
+    .image-button:checked,
+    .image-button:active:disabled
+    .image-button:checked:disabled {
+      background-color: transparent;
+      border-style: none;
+      background-size: 21px 21px;
+      background-position: center;
+      padding: 3px 2px 2px 3px;
+      margin: 3px 0px 0px -4px;
+      background-repeat: no-repeat;
+      outline-color: transparent;
+    }
+
+    .image-button {
+      background: no-repeat  url('assets/button-bg-normal.png') 100% 100%;
+      background-position: center;
+
+      &:hover,
+      &:active,
+      &:focus {
+        box-shadow: none;
+        border-style: none;
+        outline-color: transparent;
+      }
+
+
+      &:hover {
+        background: no-repeat  url('assets/button-bg-hover.png') 100% 100%;
+        background-position: center;
+      }
+
+      &:backdrop {
+        background: no-repeat url('assets/button-bg-backdrop.png') 100% 100%;
+        background-position: center;
+        &:hover {
+          background: no-repeat url('assets/button-bg-backdrop-hover.png') 100% 100%;
+          background-position: center;
+        }
+        
+      }
+
+      &:active {
+        background: no-repeat url('assets/button-bg-active.png') 100% 100%;
+        background-position: center;
+      }
+
+
+    }
+
+
     .titlebutton {
+
       &.close, &.maximize, &.minimize, &:not(separator) {
-        padding: 2px 2px;
         border: none;
         box-shadow: none;
         color: transparent;
         background-color: transparent;
-        -gtk-icon-shadow: none;
-        
+        padding: 3px 2px 2px 3px;
+        margin: 3px 0px 0px -4px;
+        background-size: 21px 21px;
         background-position: center;
-        background-repeat: no-repeat;
+
       }
+
+
       &.close {
         background: url('assets/close-normal.png') 100% 100%;
 

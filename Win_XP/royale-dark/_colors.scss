@@ -25,6 +25,8 @@ $unfocused_disabled_bg_color : gtkmix($fg_color, $bg_color, 0.98);
 $unfocused_disabled_fg_color : gtkmix($fg_color, $bg_color, 0.75);
 $unfocused_disabled_base_color : $unfocused_disabled_bg_color;
 $unfocused_disabled_text_color : $unfocused_disabled_fg_color;
+$window_border_color: #161d2d;
+$window_border_backdrop_color: #030406;
 
 // Darker color scheme
 $dark_bg_color : $bg_color;
@@ -76,6 +78,7 @@ $headerbar_bg_color : $bg_color;
 $headerbar_fg_color : $fg_color;
 $terminal_bg_color : #000000;
 $terminal_fg_color : #FFFFFF;
+$entry_fg_color: #7f9db9;
 
 // Whisker menu colors
 $whisker_bg_color : #353f4d;
@@ -104,3 +107,5 @@ $desktop_item_text_shadow : gtkalpha($dark_shadow, 0.8);
 // LightDM greeter colors
 $lightdm_bg_color : $dark_bg_color;
 $lightdm_fg_color : $dark_fg_color;
+$popup_border_color: #aca899;
+$tooltip_border_color : #000000;

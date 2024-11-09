@@ -25,6 +25,12 @@ $unfocused_disabled_bg_color : gtkmix($fg_color, $bg_color, 0.98);
 $unfocused_disabled_fg_color : gtkmix($fg_color, $bg_color, 0.75);
 $unfocused_disabled_base_color : $unfocused_disabled_bg_color;
 $unfocused_disabled_text_color : $unfocused_disabled_fg_color;
+$popover_bg_color: #d6dff7;
+$popover_fg_color: #215dc6;
+$popover_border_color: #7291e0;
+$popup_border_color: #aca899;
+$window_border_color: #758d5e;
+$window_border_backdrop_color: #c8d0b7;
 
 // Darker color scheme
 $dark_bg_color : $bg_color;
@@ -60,6 +66,7 @@ $warning_color : #FF9900;
 // Widget colors
 $tooltip_bg_color : #E9E9E9;
 $tooltip_fg_color : #000000;
+$tooltip_border_color : #000000;
 $menu_bg_color : $base_color;
 $menu_fg_color : $text_color;
 $menubar_bg_color : $bg_color;
@@ -76,6 +83,7 @@ $headerbar_bg_color : $bg_color;
 $headerbar_fg_color : $fg_color;
 $terminal_bg_color : #000000;
 $terminal_fg_color : #FFFFFF;
+$entry_fg_color: #7f9db9;
 
 // Whisker menu colors
 $whisker_bg_color : #ffffff;
