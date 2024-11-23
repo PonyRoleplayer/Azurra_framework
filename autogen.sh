@@ -39,9 +39,26 @@ hlight() { tput setaf 33 && echo $@ && tput sgr 0; }
 
 is_theme() { [ -f "$1/theme.conf" ] && return 0 || return 1; }
 is_bundle() { [ -f "$1/bundle.conf" ] && return 0 || return 1; }
-load_conf() { source $1/*.conf; }
+load_conf() { 
+  cinnamon_specific=0;
+  source $1/*.conf; 
+  }
 has_dark() { [ -z $target_dir_dark ] && return 1 || return 0; }
 has_light() { [ -z $target_dir_light ] && return 1 || return 0; }
+has_cinnamon() { 
+  if [[ -z $cinnamon_specific ]]; then
+      echo "cinn specific nulo"
+      return 1
+  else 
+    echo "cinn specific no nulo"
+    echo $cinnamon_specific
+    if [ "$cinnamon_specific" == "1" ]; then
+      return 0
+    else 
+      return 1
+    fi
+  fi
+}
 has_render() {
   [ -d "$1/assets-render" ] || [ -d "$1/assets-render-light" ] || [ -d "$1/assets-render-dark" ] && return 0
   return 1
@@ -64,7 +81,11 @@ deploy() {
   has_dark && rm -rf "$target_dir_dark"/*.css
   has_light && rm -rf "$target_dir_light"/*.css
 
-  cp $1/gtk*.css "$target_dir"
+  if has_cinnamon; then
+    cp $1/cinnamon*.css "$target_dir"
+  else
+    cp $1/gtk*.css "$target_dir"
+  fi
   
   # Specific deploys
   for stylesheet in $1/*.css; do
@@ -95,12 +116,24 @@ compile() {
   load_conf $1
   [ $LOCK_ADD == true ] && echo -n "Compiling $(hlight -n $name), " || echo "Compiling $(hlight $name)"
 
-  for sass_file in $1/gtk*.scss; do
-    local filename=${sass_file%".scss"}
-    sass $sass_args $sass_file $filename.css
+  if has_cinnamon; 
+    then 
+    echo "Cinnamon Specific Detected." 
+    echo $cinnamon_specific
+    for sass_file in $1/cinnamon*.scss; do
+      local filename=${sass_file%".scss"}
+      sass $sass_args $sass_file $filename.css
 
-    [ $? -ne 0 ] && fail "SASS exited unexpectedly, aborting"
-  done
+      [ $? -ne 0 ] && fail "SASS exited unexpectedly, aborting"
+    done
+  else 
+    for sass_file in $1/gtk*.scss; do
+      local filename=${sass_file%".scss"}
+      sass $sass_args $sass_file $filename.css
+
+      [ $? -ne 0 ] && fail "SASS exited unexpectedly, aborting"
+    done
+  fi  
 
   echo 'done'
 }
