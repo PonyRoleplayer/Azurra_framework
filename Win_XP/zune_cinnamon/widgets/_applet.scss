@@ -1,0 +1,52 @@
+@mixin applet() {
+      /* ===================================================================
+  * Applets (applet.js)
+  * ===================================================================*/
+  .applet-separator {
+    padding: 5px 4px;
+  }
+  .applet-separator-line {
+    width: 1px;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  StBoxLayout.xapp-status-cinnamon-org-applet {
+      padding-left: 4px;
+  }
+  
+  .applet-box {
+    padding-left: 1px;
+    padding-right: 1px;
+    transition-duration: 300;
+  }
+  .applet-box:hover {
+    background-color: rgba(25,25,25,0.2);
+    color:  white;
+    transition-duration: 100;
+  }
+  .applet-box:active {
+    background-color: rgba(25,25,25,0.4);
+    color:  white;
+    transition-duration: 100;
+  
+  }
+  
+  .applet-label:not(:first-child) {
+    font-weight: normal;
+  }
+  
+  .applet-label,
+  .applet-label:hover,
+  .applet-box:hover > .applet-label {
+    color: white;
+  }
+  
+  .applet-icon {
+    icon-size: 1.3em;
+  }
+  
+  .applet-icon:hover,
+  .applet-box:hover > .applet-icon {
+  
+  }
+}

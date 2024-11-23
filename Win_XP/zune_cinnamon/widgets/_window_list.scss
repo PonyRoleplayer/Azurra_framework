@@ -1,0 +1,137 @@
+@mixin window_list() {
+      /* ===================================================================
+  * Window list (windowList.js)
+  * ===================================================================*/
+  .window-list-box {
+    spacing: 1px;
+    padding-top: 1px;
+  }
+  
+  .window-list-item-label {
+    font-weight: normal;
+    width: 15em;
+    min-width: 5px;
+  }
+  
+  .window-list-item-box {
+    border-image: url('assets/normal.png');
+    padding: 1px;
+    transition-duration: 100;
+  }
+  
+  .window-list-item-box:active,
+  .window-list-item-box:checked,
+  .window-list-item-box:focus    {
+    border-image: url('assets/active.png');
+  }
+  
+  
+  .window-list-item-box:hover  {
+    border-image: url('assets/hover.png');
+  }
+  
+  .window-list-item-box:focus:hover  {
+    border-image: url('assets/active-hover.png');
+  }
+  
+  .window-list-item-demands-attention {
+    border-image: url('assets/urgent.png');
+  }
+  
+  /* https://github.com/B00merang-Project/Windows-XP/issues/44 */
+  .grouped-window-list-thumbnail-menu {
+    spacing: 6px;
+    padding: 6px 12px 12px 12px;
+    border-image: url("assets/menu-bottom.png") 6;
+    color: #ffffff;
+  }
+  
+  /* experimental support for grouped window list */
+  .grouped-window-list-item-box {
+    color: var(--grouped_window_list_text);
+    font-weight: normal;
+    border-image: none;
+    transition-duration: 100;
+    /*min-width: 160px;*/
+  }
+  
+  .grouped-window-list-item-box:hover {
+    border-image: url("assets/hover.png") 4;
+    transition-duration: 100;
+  }
+  
+  .grouped-window-list-item-box:active,
+  .grouped-window-list-item-box:checked {
+    border-image: url("assets/normal.png") 4;
+    transition-duration: 100;
+  }
+  
+  .grouped-window-list-item-box:active:hover,
+  .grouped-window-list-item-box:checked:hover {
+    border-image: url("assets/hover.png") 8;
+    transition-duration: 100;
+  }
+  
+  .grouped-window-list-item-box:focus {
+    border-image: url("assets/active.png") 8;
+    transition-duration: 100;
+  }
+  
+  .grouped-window-list-item-box:focus:hover {
+    border-image: url("assets/active-hover.png") 8;
+    transition-duration: 100;
+  }
+  
+  .grouped-window-list-item-demands-attention {
+    font-weight: normal;
+    border-image: url("assets/urgent.png") 4;
+    transition-duration: 100;
+  }
+  
+  .grouped-window-list-item-attention:hover {
+    border-image: url("assets/urgent.png") 4;
+  }
+  
+  .window-list-item-box .progress,
+  .grouped-window-list-item-box .progress {
+    background-color: #4b7843;
+    transition-duration: 100;
+  }
+  
+  .window-list-preview {
+    spacing: 6px;
+    color: #000000;
+    border-image: url('assets/popupmenu.png') 8 8 8 8;
+    border-radius: 0;
+    padding: 6px 12px 12px 12px;
+    font-size: 1em;
+  }
+  
+  .grouped-window-list-thumbnail-menu {
+      spacing: 6px;
+        padding: 6px 12px 12px 12px;
+      border-image: url("assets/menu-bottom.png") 6;
+      color: #ffffff;
+  }
+  
+  .grouped-window-list-thumbnail-menu > StBoxLayout {
+    padding: 4px;
+  }
+  
+  .grouped-window-list-thumbnail-menu .item-box {
+    padding: 10px;
+    border-radius: 0;
+    spacing: 4px;
+  }
+  
+  .grouped-window-list-thumbnail-menu .item-box:outlined {
+    padding: 8px;
+    border: 1px solid #1466c9;
+  }
+  
+  .grouped-window-list-thumbnail-menu .item-box:selected {
+    color: #ffffff;
+    background-color: #1466c9;
+    border: none;
+  }
+}

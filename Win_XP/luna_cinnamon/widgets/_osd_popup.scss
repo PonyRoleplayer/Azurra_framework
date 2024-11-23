@@ -1,0 +1,74 @@
+@mixin osd_popup() {
+    /* ===================================================================
+ * OSD Popups
+ * ===================================================================*/
+.info-osd {
+    font-size: 1em;
+    border-image: url("background-assets/bg-1.png") 6;
+    padding: 12px;
+    color: rgb(70, 70, 70);
+    text-align: center;
+}
+
+.restart-osd {
+    font-size: 1.6em;
+}
+
+.workspace-osd {
+    color: #fff;
+    font-size: 25pt;
+    text-align: center;
+    background: #013b6b;
+    border: 2px solid #399cee;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+  }
+
+  .expo-workspaces-name-entry {
+    padding: 5px;
+    padding-bottom: 7px;
+    color: gray;
+    border: 1px solid gray;
+    background-color: white;
+    selected-color: black;
+    caret-color: black;
+    caret-size: 1px;
+    height: 16px;
+    text-align: center;
+  }
+  
+  .expo-workspaces-name-entry#selected {
+    background-color: #f1f1f1;
+    padding: 5px;
+    padding-bottom: 7px;
+    border: 1px solid #399cee;
+    text-align: center;
+    height: 16px;
+  }
+  
+  .expo-workspaces-name-entry:focus {
+    padding: 5px;
+    padding-bottom: 7px;
+    color: black;
+    transition-duration: 300;
+    text-align: center;
+  }
+
+.osd-window {
+    border-image: url("background-assets/bg-1.png") 6;
+    color: rgb(70, 70, 70);
+    padding: 20px;
+    spacing: 1em;
+}
+
+.osd-window .level {
+    height: 0.7em;
+    border-radius: 0.3em;
+    background-color: rgba(70, 70, 70, 0.4);
+}
+
+.osd-window .level-bar {
+    border-radius: 0.3em;
+    background-color: rgb(172, 205, 138);
+}
+}

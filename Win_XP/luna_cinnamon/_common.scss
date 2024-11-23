@@ -1,0 +1,214 @@
+/* ###################################################################
+* Section common with Gnome Shell
+* ... contains a few cinnamon specific styles (rare occurences)
+* ###################################################################*/
+stage {
+    font-family: Noto Sans, sans-serif;
+  }
+  
+  .cinnamon-link {
+    color: #0000ff;
+    text-decoration: underline;
+  }
+  
+  .cinnamon-link:hover {
+    color: #0000e0;
+  }
+  
+  .label-shadow {
+    color: rgba(0,0,0,0.5);
+  }
+  
+  StScrollView.vfade {
+    -st-vfade-offset: 0px;
+  }
+  
+  StScrollView StScrollBar {
+    min-width: 17px;
+    min-height: 17px;
+  }
+  
+  StScrollBar {
+    padding: 0px;
+  }
+  
+  StScrollBar StBin#trough {
+    background-color: rgba(0,0,0,0.2);
+  }
+  
+  StScrollBar StButton#hhandle,
+  StScrollBar StButton#vhandle,
+  StScrollBar StButton#hhandle:hover,
+  StScrollBar StButton#vhandle:hover {
+    border-image: url('assets/outset-shadow.png') 3;
+  }
+  
+  .menu-applications-box StButton#vhandle {
+    background: url('assets/handle-vert.png') no-repeat center center;
+  }
+  
+  .menu-applications-box StButton#vhandle:hover {
+    background: url('assets/handle-vert.png') no-repeat center center;
+  }
+  
+  
+  #Tooltip {
+    border: 1px solid black;
+    border-radius: 0px;
+    padding: 2px 12px;
+    background-gradient-end: #FFFFE2;
+    background-gradient-start: #FFFFE2;
+    background-gradient-direction: vertical;
+    color: black;
+    font-size: 8.5pt;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  /* ===================================================================
+  * Shared button properties
+  * ===================================================================*/
+  
+  .notification-button, .notification-icon-button,
+  .hotplug-notification-item, .hotplug-resident-eject-button,
+  .modal-dialog-button {
+    color: black;
+    border-image: url('assets/buttons/button.png') 5;
+    font-size: 8.5pt;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  .notification-button:hover,
+  .notification-icon-button:hover, .hotplug-notification-item:hover,
+  .hotplug-resident-eject-button:hover, .modal-dialog-button:hover {
+    border-image: url('assets/buttons/button-hover.png') 5;
+  }
+  
+  .notification-button:focus,
+  .notification-icon-button:focus, .hotplug-notification-item:focus,
+  .modal-dialog-button:focus {
+    border-image: url('assets/buttons/button-focused.png') 5;
+  }
+  
+  .notification-button:active, .notification-icon-button:active,
+  .hotplug-notification-item:active, .hotplug-resident-eject-button:active,
+  .modal-dialog-button:active, .modal-dialog-button:pressed {
+    border-image: url('assets/buttons/button-pressed.png') 5;
+  }
+  
+  @include user();
+
+  @include popup();
+
+  
+  /* Switches (to be used in menus) */
+  .toggle-switch {
+    width: 52px;
+    height: 18px;
+  }
+  
+  .toggle-switch-us, .toggle-switch-intl {
+    background-image: url("assets/checkbox-off.png");
+  }
+  
+  .toggle-switch-us:checked, .toggle-switch-intl:checked {
+    background-image: url("assets/checkbox.png");
+  }
+  
+  .nm-menu-item-icons {
+    spacing: .5em;
+  }
+  
+  @include panel();
+  
+  @include overview();
+  
+  @include desklet();
+  
+  /* ===================================================================
+  * Clock Desklet (desklet.js)
+  * ===================================================================*/
+  .clock-desklet-label {
+  }
+  
+  @include looking_glass();
+  
+  @include calendar();
+  
+  @include notification();
+  
+  @include alt_tab();
+  
+  /* ###################################################################
+  * Cinnamon Specific Section
+  * ###################################################################*/
+  
+@include menu();
+  
+@include window_list();
+
+@include sound_applet();
+  
+  /* ===================================================================
+  * Workspace Switcher applet (workspaceSwitcher.js)
+  * ===================================================================*/
+  #workspaceSwitcher {
+    spacing: 2px;
+    padding: 2px;
+  }
+  
+  .workspace-button {
+    width: 20px;
+    height: 10px;
+    padding: 2px;
+    border-radius: 0px;
+    background-color: rgba(255,255,255,0.0);
+    color: #fff;
+    transition-duration: 250;
+  }
+  
+  .workspace-button:outlined {
+    padding: 2px;
+    background-color: #000;
+    border-radius: 0px;
+    color: #399cee;
+  }
+  
+  .workspace-button:hover {
+    padding: 2px;
+    background-color: #000;
+    border-radius: 0px;
+    color: #399cee;
+  }
+  
+
+  
+  /* ===================================================================
+  * Overview corner
+  * ===================================================================*/
+  #overview-corner {
+    background-image: url("assets/overview.png");
+  }
+  
+  #overview-corner:hover {
+    background-image:  url("assets/overview-hover.png");
+  }
+  
+  @include applet();
+
+  @include osd_popup();
+
+  @include notification_applet();
+  
+  @include numa();
+  
+  @include cinn_xp_stark_menu();
+
+  @include snap_tile();
+   
+  @include miscelaneous();
+
+  
+   
+  

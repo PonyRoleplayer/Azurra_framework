@@ -1,0 +1,138 @@
+@mixin overview() {
+ /* ===================================================================
+  * Overview
+  * ===================================================================*/
+  
+  #overview {
+    spacing: 12px;
+  }
+  
+  .window-caption {
+    background-color: white;
+    border-radius: 0px;
+    color: black;
+    spacing: 25px;
+    font-size: 9pt;
+    padding: 2px 8px;
+    -cinnamon-caption-spacing: 4px;
+  }
+  
+  .window-caption#selected {
+    background-color: white;
+    border-radius: 0px;
+    color: black;
+    spacing: 25px;
+  }
+  
+  .workspace-controls {
+    visible-height: 32px; /* Amount visible before hovering */
+  }
+  
+  .workspace-thumbnails-background {
+    border: 1px #399cee;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-radius:  0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+  }
+  
+  .workspace-thumbnails-background:rtl {
+    border-right: 1px;
+    border-left: 0px;
+    border-radius: 9px 9px 0px 0px;
+  }
+  
+  .workspace-thumbnails {
+    spacing: 14px;
+  }
+  
+  .workspace-add-button {
+    background-image: url("assets/add-workspace.png");
+    height: 200px;
+    width: 35px;
+    transition-duration: 300;
+  }
+  
+  .workspace-add-button:hover {
+    background-image: url("assets/add-workspace-hover.png");
+    transition-duration: 300;
+  }
+  
+  .workspace-close-button {
+    background-image: url("assets/close.png");
+    height: 34px;
+    width: 34px;
+    -cinnamon-close-overlap: 20px;
+  }
+  
+  .window-close:hover,
+  .window-close:active {
+    background-image: url("assets/close-hover.png");
+  }
+  
+  
+  .workspace-thumbnail-indicator {
+    outline: 2px solid white;
+    border: 1px solid #888;
+  }
+  
+  .window-close {
+    background-image: url("assets/close.png");
+    height: 34px;
+    width: 34px;
+    -cinnamon-close-overlap: 20px;
+  }
+  
+  .window-close:rtl {
+    -st-background-image-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  }
+  
+  .window-close-area {
+    background-image: url("assets/trash-icon.png");
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #399cee;
+    border-bottom: 0px;
+    border-radius: 0px;
+    height: 120px;
+    width: 400px;
+  }
+  
+  .icon-grid {
+    spacing: 36px;
+    -cinnamon-grid-item-size: 118px;
+  }
+  
+  .icon-grid .overview-icon {
+    icon-size: 96px;
+  }
+  
+  .overview-icon {
+    border-radius: 4px;
+    padding: 3px;
+    border: 1px rgba(0,0,0,0);
+    font-size: 7.5pt;
+    color: white;
+    transition-duration: 100;
+    text-align: center;
+  }
+  
+  .expo-background {
+    background-color: rgba(0,0,0,0.2);
+  }
+  
+  .workspace-overview-background-shade {
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .expo-workspace-thumbnail-frame {
+    border: 1px, black;
+    background-color: black;
+  }
+  
+  .expo-workspace-thumbnail-frame#active {
+    border: 1px, #399cee;
+    background-color: #399cee;
+  }
+}

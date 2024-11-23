@@ -1,0 +1,176 @@
+@mixin menu() {
+    /* ===================================================================
+  * Menu (menu.js)
+  * ===================================================================*/
+  
+  /* Main menu title */
+  
+  .menu-favorites-box {
+    margin: auto;
+    background-color: #D3E5FA;
+    border: 1px solid #95bdee;
+    border-radius: 0px;
+    padding: 0.5em;
+    color: black;
+  }
+  
+  .menu-background {
+    border: solid 1px transparent;
+    border-image: url("assets/menu-bg.png") 12 12 67 42;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    padding: 55px 1px 0px 1px;
+  }
+  
+  .menu-favorites-button {
+    padding: 10px;
+    border-radius: 0px;
+  }
+  
+  .menu-favorites-button:hover {
+    background-color: #316ac5;
+    color: white;
+  }
+  
+  .menu-places-box {
+    margin: auto;
+    padding: 8px;
+    border: 0px solid #666;
+  }
+  
+  .menu-places-button {
+    padding: 10px;
+  }
+  
+  .menu-categories-box {
+    padding: 10px;
+  }
+  
+  .menu-applications-box {
+    padding: 10px 0px 0px 10px;
+    background-color: white;
+    border: none;
+  }
+  
+  .menu-applications-inner-box {
+    padding: 5px;
+    background-color: #d3e5fa;
+  }
+  
+  .menu-applications-box StScrollBar {
+    padding: 0px;
+  }
+  
+  .menu-applications-box StScrollView {
+    border: 0px solid #305496;
+    border-image: none;
+    border-right-width: 0px;
+  }
+  
+  
+  .menu-applications-box StBin#trough {
+    background: none;
+    border-width: 0px;
+    box-shadow: none;
+    border-image: url('assets/trough-scrollbar-vert.png') 1;
+  }
+  
+  .menu-applications-box StButton#vhandle {
+    border-image: url('assets/slider-vert.png') 3;
+    background: url('assets/handle-vert.png') no-repeat center center;
+  }
+  
+  .menu-applications-box StButton#vhandle:hover {
+    border-image: url('assets/slider-vert-hover.png') 3;
+    background: url('assets/handle-vert.png') no-repeat center center;
+  }
+  
+  .menu-application-button {
+    padding: 7px;
+    max-width: 10px;
+    color: black;
+  }
+  
+  .menu-application-button-selected {
+    padding: 7px;
+    color: white;
+    background-color: #335ea8;
+  }
+  
+  .menu-application-button-label:ltr {
+    padding-left: 5px;
+  }
+  
+  .menu-application-button-label:rtl {
+    padding-right: 5px;
+  }
+  
+  .menu-category-button {
+    padding: 7px;
+    color: black;
+  }
+  
+  .menu-category-button-greyed {
+    padding: 7px;
+    color: #808080;
+  }
+  
+  .menu-category-button-selected {
+    padding: 7px;
+    color: white;
+    background-color: #335ea8;
+  }
+  
+  .menu-category-button-label:ltr {
+    padding-left: 5px
+  }
+  
+  .menu-category-button-label:rtl {
+    padding-right: 5px
+  }
+  
+  /* Name and description of the currently hovered item in the menu
+  * This appears on the bottom right hand corner of the menu*/
+  
+  .menu-selected-app-box {
+    padding-top: 16px;
+    padding-right: 30px;
+    padding-left: 28px;
+    text-align: right;
+    color: black;
+  }
+  
+  .menu-selected-app-title {
+    font-weight: bold;
+  }
+  
+  .menu-selected-app-description {
+    max-width: 150px;
+  }
+  #menu-search-entry, #menu-search-entry:hover, #menu-search-entry:focus {
+    padding: 5px 6px;
+    color: #000;
+    font: 9pt;
+    height: 18px;
+    width: 250px;
+    selected-color: white;
+    caret-color: #000;
+    background-color: white;
+    caret-size: 1px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+  }
+  
+  .menu-search-box {
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .menu-search-entry-icon {
+    icon-size: 1em;
+    color: #000;
+  }
+  
+  /* Context menu (at the moment only for favorites) */
+  .menu-context-menu {
+  }  
+}
