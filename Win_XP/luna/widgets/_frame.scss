@@ -2,7 +2,7 @@
   .frame, frame > border {
     border-width: 2px;
     border-style: groove;
-    border-color: $borders;
+    border-color: $frame_border_color;
     border-radius: 0;
     box-shadow: none;
     background: none;
