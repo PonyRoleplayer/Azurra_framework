@@ -1,0 +1,10 @@
+@mixin statusbar() {
+  statusbar {
+    padding: 0 4px 0 4px;
+    color: $fg_color;
+
+    frame  {
+      border: 2px groove $frame_border_color;
+    }
+  }
+}

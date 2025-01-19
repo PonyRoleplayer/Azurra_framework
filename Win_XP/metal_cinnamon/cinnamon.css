@@ -502,12 +502,11 @@ StScrollBar StButton#vhandle:hover {
   color: #eee; }
 
 .desklet-with-borders {
-  border: 1px solid #444;
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  background-color: #232323;
-  border-radius: 0px;
+  border: 1px solid #FFF;
+  background-gradient-direction: vertical;
+  background-gradient-start: #1d4d9c;
+  background-gradient-end: #5c89c9;
+  border-radius: 6px;
   color: #eee; }
 
 .desklet-with-borders-and-header {

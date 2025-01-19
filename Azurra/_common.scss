@@ -29,11 +29,15 @@
 // Image effects 
 * {
   &:disabled {
+    //Would this cause performance problems? I need real life scenarios to test
     -gtk-icon-effect: dim;
   }
 
   &:hover {
-    -gtk-icon-effect: highlight;
+    //This causes performance problems in list with rows that has icons.
+    // It seems that all the icons are re-drawn whenever you move the pointer
+    // on top of them.
+    //-gtk-icon-effect: highlight;
   }
 }
 
