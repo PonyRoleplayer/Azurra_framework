@@ -1,147 +1,285 @@
 @mixin window_list() {
-      /* ===================================================================
-  * Window list (windowList.js)
-  * ===================================================================*/
-  .window-list-box {
-    spacing: 1px;
-    padding-top: 1px;
-  }
-  
-  .window-list-item-label {
-    font-weight: normal;
-    width: 15em;
-    min-width: 5px;
-  }
-  
-  .window-list-item-box {
-    border-image: url('assets/normal.png');
-    padding: 1px;
-    transition-duration: 100;
+  /* ===================================================================
+* Window list (windowList.js)
+* ===================================================================*/
+.window-list-box {
+//spacing: 1px;
+//padding-top: 1px;
+}
 
-    &:active,
-    &:checked,
-    &:focus    {
-      border-image: url('assets/active.png');
+.window-list-item-label {
+font-weight: normal;
+width: 15em;
+min-width: 5px;
+}
+
+.window-list-item-box {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-normal.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-normal.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-normal.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-normal.png');
+  }
+  //padding: 10px;
+  transition-duration: 100;
+
+  &:active,
+  &:checked,
+  &:focus    {
+    *.panel-top & {
+      border-image: url('assets/item-box-top-active.png');
     }
-
-    &:hover  {
-      border-image: url('assets/hover.png');
+    *.panel-bottom & {
+      border-image: url('assets/item-box-bottom-active.png');
     }
-
-    &:focus:hover  {
-      border-image: url('assets/active-hover.png');
+    *.panel-left & {
+      border-image: url('assets/item-box-left-active.png');
     }
-
+    *.panel-right & {
+      border-image: url('assets/item-box-right-active.png');
+    }
   }
-  
-  
-  .window-list-item-demands-attention {
-    border-image: url('assets/urgent.png');
-  }
-  
 
+  &:hover  {
+    *.panel-top & {
+      border-image: url('assets/item-box-top-hover.png');
+    }
+    *.panel-bottom & {
+      border-image: url('assets/item-box-bottom-hover.png');
+    }
+    *.panel-left & {
+      border-image: url('assets/item-box-left-hover.png');
+    }
+    *.panel-right & {
+      border-image: url('assets/item-box-right-hover.png');
+    }
+  }
+
+  &:focus:hover  {
+    *.panel-top & {
+      border-image: url('assets/item-box-top-active-hover.png');
+    }
+    *.panel-bottom & {
+      border-image: url('assets/item-box-bottom-active-hover.png');
+    }
+    *.panel-left & {
+      border-image: url('assets/item-box-left-active-hover.png');
+    }
+    *.panel-right & {
+      border-image: url('assets/item-box-right-active-hover.png');
+    }
+  }
+
+}
+
+
+.window-list-item-demands-attention {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-urgent.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-urgent.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-urgent.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-urgent.png');
+  }
+}
+
+.grouped-window-list-box {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+/* https://github.com/B00merang-Project/Windows-XP/issues/44 */
+.grouped-window-list-thumbnail-menu {
+spacing: 6px;
+padding: 6px 12px 12px 12px;
+border-image: url("assets/menu-bottom.png") 6;
+color: #ffffff;
+}
+
+/* experimental support for grouped window list */
+.grouped-window-list-item-box {
+color: var(--grouped_window_list_text);
+font-weight: normal;
+border-image: none;
+transition-duration: 100;
+color:$grouped_window_list_fg;
+
+/*min-width: 160px;*/
+&:hover {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-hover.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-hover.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-hover.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-hover.png');
+  }
+  transition-duration: 100;
+}
+
+&:active,
+&:checked {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-normal.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-normal.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-normal.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-normal.png');
+  }
+
+  transition-duration: 100;
   
+}
+
+&:active:hover,
+&:checked:hover {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-hover.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-hover.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-hover.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-hover.png');
+  }
+
+  transition-duration: 100;
   
-  /* https://github.com/B00merang-Project/Windows-XP/issues/44 */
-  .grouped-window-list-thumbnail-menu {
-    spacing: 6px;
+}
+
+&:focus {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-active.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-active.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-active.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-active.png');
+  }
+  transition-duration: 100;
+  color: $grouped_window_list_focus_fg;
+}
+
+&:focus:hover {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-hover.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-hover.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-hover.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-hover.png');
+  }
+  transition-duration: 100;
+  color: $grouped_window_list_focus_fg;
+}
+}
+
+
+.grouped-window-list-item-demands-attention {
+font-weight: normal;
+*.panel-top & {
+  border-image: url('assets/item-box-top-urgent.png');
+}
+*.panel-bottom & {
+  border-image: url('assets/item-box-bottom-urgent.png');
+}
+*.panel-left & {
+  border-image: url('assets/item-box-left-urgent.png');
+}
+*.panel-right & {
+  border-image: url('assets/item-box-right-urgent.png');
+}
+
+transition-duration: 100;
+}
+
+.grouped-window-list-item-attention:hover {
+  *.panel-top & {
+    border-image: url('assets/item-box-top-urgent.png');
+  }
+  *.panel-bottom & {
+    border-image: url('assets/item-box-bottom-urgent.png');
+  }
+  *.panel-left & {
+    border-image: url('assets/item-box-left-urgent.png');
+  }
+  *.panel-right & {
+    border-image: url('assets/item-box-right-urgent.png');
+  }
+}
+
+.window-list-item-box .progress,
+.grouped-window-list-item-box .progress {
+background-color: #4b7843;
+transition-duration: 100;
+}
+
+.window-list-preview {
+spacing: 6px;
+color: #000000;
+border-image: url('assets/popupmenu.png') 8 8 8 8;
+border-radius: 0;
+padding: 6px 12px 12px 12px;
+font-size: 1em;
+}
+
+.grouped-window-list-thumbnail-menu {
+  spacing: 6px;
     padding: 6px 12px 12px 12px;
-    border-image: url("assets/menu-bottom.png") 6;
-    color: #ffffff;
-  }
-  
-  /* experimental support for grouped window list */
-  .grouped-window-list-item-box {
-    color: var(--grouped_window_list_text);
-    font-weight: normal;
-    border-image: none;
-    transition-duration: 100;
-    color:$grouped_window_list_fg;
+  border-image: url("assets/menu-bottom.png") 6;
+  color: #ffffff;
+}
 
-    /*min-width: 160px;*/
-    &:hover {
-      border-image: url("assets/hover.png") 4;
-      transition-duration: 100;
-    }
-    
-    &:active,
-    &:checked {
-      border-image: url("assets/normal.png") 4;
-      transition-duration: 100;
-      
-    }
-    
-    &:active:hover,
-    &:checked:hover {
-      border-image: url("assets/hover.png") 8;
-      transition-duration: 100;
-      
-    }
-    
-    &:focus {
-      border-image: url("assets/active.png") 8;
-      transition-duration: 100;
-      color: $grouped_window_list_focus_fg;
-    }
-    
-    &:focus:hover {
-      border-image: url("assets/active-hover.png") 8;
-      transition-duration: 100;
-      color: $grouped_window_list_focus_fg;
-    }
-  }
-  
-  
-  .grouped-window-list-item-demands-attention {
-    font-weight: normal;
-    border-image: url("assets/urgent.png") 4;
-    transition-duration: 100;
-  }
-  
-  .grouped-window-list-item-attention:hover {
-    border-image: url("assets/urgent.png") 4;
-  }
-  
-  .window-list-item-box .progress,
-  .grouped-window-list-item-box .progress {
-    background-color: #4b7843;
-    transition-duration: 100;
-  }
-  
-  .window-list-preview {
-    spacing: 6px;
-    color: #000000;
-    border-image: url('assets/popupmenu.png') 8 8 8 8;
-    border-radius: 0;
-    padding: 6px 12px 12px 12px;
-    font-size: 1em;
-  }
-  
-  .grouped-window-list-thumbnail-menu {
-      spacing: 6px;
-        padding: 6px 12px 12px 12px;
-      border-image: url("assets/menu-bottom.png") 6;
-      color: #ffffff;
-  }
-  
-  .grouped-window-list-thumbnail-menu > StBoxLayout {
-    padding: 4px;
-  }
-  
-  .grouped-window-list-thumbnail-menu .item-box {
-    padding: 10px;
-    border-radius: 0;
-    spacing: 4px;
-  }
-  
-  .grouped-window-list-thumbnail-menu .item-box:outlined {
-    padding: 8px;
-    border: 1px solid #1466c9;
-  }
-  
-  .grouped-window-list-thumbnail-menu .item-box:selected {
-    color: #ffffff;
-    background-color: #1466c9;
-    border: none;
-  }
+.grouped-window-list-thumbnail-menu > StBoxLayout {
+padding: 4px;
+}
+
+.grouped-window-list-thumbnail-menu .item-box {
+padding: 10px;
+border-radius: 0;
+spacing: 4px;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:outlined {
+padding: 8px;
+border: 1px solid #1466c9;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:selected {
+color: #ffffff;
+background-color: #1466c9;
+border: none;
+}
 }

@@ -3,20 +3,29 @@
   * Applets (applet.js)
   * ===================================================================*/
   .applet-separator {
-    padding: 5px 4px;
+    //padding: 5px 4px;//
   }
   .applet-separator-line {
-    width: 1px;
+    //width: 1px;//
     background: rgba(0,0,0,0.5);
   }
   
-  StBoxLayout.xapp-status-cinnamon-org-applet {
+  .xapp-status-cinnamon-org-applet {
+    *.panel-bottom &,
+    *.panel-top & {
       padding-left: 4px;
+    }
+
+    *.panel-left &,
+    *.panel-right & {
+      padding-top: 4px;
+    }
+      
   }
   
   .applet-box {
-    padding-left: 1px;
-    padding-right: 1px;
+    //padding-left: 1px;//
+    //padding-right: 1px;//
     transition-duration: 300;
   }
   .applet-box:hover {
@@ -42,7 +51,7 @@
   }
   
   .applet-icon {
-    icon-size: 1.3em;
+    //icon-size: 1.3em;//
   }
   
   .applet-icon:hover,

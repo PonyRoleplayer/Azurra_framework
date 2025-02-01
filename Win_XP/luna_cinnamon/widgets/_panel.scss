@@ -5,11 +5,33 @@
 
   #panel {
     color: $panel_color_fg;
-    background-color: #013c6b;
-    font-size: 9pt;
-    border-image: url('assets/panel.png') 80 0 0 0;
-    font-weight: normal;
-    height: 30px;
+    //background-color: #013c6b;//
+    //font-size: 9pt;//
+    //font-weight: normal;//
+    //height: 30px;//
+    
+    &.panel-top {
+      background-repeat: repeat;
+      background-image: url('assets/panelmiddle-top.png');
+      background-size: contain;
+    }
+    &.panel-right {
+      background-repeat: repeat;
+      background-image: url('assets/panelmiddle-right.png');
+      background-size: contain;
+    }
+    &.panel-bottom {
+      background-repeat: repeat;
+      background-image: url('assets/panelmiddle-bottom.png');
+      background-size: contain;
+    }
+    &.panel-left {
+      background-repeat: repeat;
+      background-image: url('assets/panelmiddle-left.png');
+      background-size: contain;
+    }
+
+
   }
   
 
@@ -17,7 +39,7 @@
   #panelLeft {
     color: $panel_left_color;
   
-    spacing: 4px;
+    //spacing: 4px;//
 
     &:dnd {
       background-gradient-direction: vertical;
@@ -25,36 +47,81 @@
       background-gradient-end: rgba(255,0,0,0.4);
     }
     &:ltr {
-      padding-right: 4px;
+      //padding-right: 4px;//
     }
     
     &:rtl {
-      padding-left: 4px;
+      //padding-left: 4px;//
     }
-
-    & .applet-box:first-child:hover {
-      border-image: url('assets/menu-hover.png') 7 0 0 0;
+    /*
+    * Ideally, I'd use background-image for this.
+    * However, it doesn't work because background-size is bugged and 100% 100% doesn't work
+    */
+    
+    *.panel-top & .applet-box:first-child {
+      border-image: url('assets/panelmenu-top-box.png') 7 0 0 0;
+      padding-left: 8px;
+      min-width: 90px;
+      &:hover {
+        border-image: url('assets/panelmenu-top-hover.png') 7 0 0 0;
+      }
+      &:active {
+        border-image: url('assets/panelmenu-top-active.png') 7 0 0 0;
+      }
     }
+    
+  /*
+  * For some reason, borders don't stretch properly when the panel is below 41px
+  */
 
-    & .applet-box:first-child:active {
-      border-image: url('assets/menu-active.png') 7 0 0 0;
+    *.panel-right & .applet-box:first-child {
+      border-image: url('assets/panelmenu-right-box.png') 7 0 0 0;
+      padding: 8px 0 8px 0;
+      &:hover {
+        border-image: url('assets/panelmenu-right-hover.png') 7 0 0 0;
+      }
+      &:active {
+        border-image: url('assets/panelmenu-right-active.png') 7 0 0 0; 
+      }
+    }
+    
+    *.panel-bottom & .applet-box:first-child {
+      border-image: url('assets/panelmenu-bottom-box.png') 7 0 0 0;
+      padding-left: 8px;
+      min-width: 90px;
+      &:hover {
+        border-image: url('assets/panelmenu-bottom-hover.png') 7 0 0 0;
+      }
+      &:active {
+        border-image: url('assets/panelmenu-bottom-active.png') 7 0 0 0;
+      }
+    }
+    *.panel-left & .applet-box:first-child {
+      border-image: url('assets/panelmenu-left-box.png') 0 0 1 0;
+      padding: 8px 0 8px 0;
+      &:hover {
+        border-image: url('assets/panelmenu-left-hover.png') 0 0 1 0;
+      }
+      &:active {
+        border-image: url('assets/panelmenu-left-active.png') 0 0 1 0;
+      }
     }
 
     & .applet-box:first-child {
-      border-image: url('assets/menu-box.png') 7 0 0 0;
-      border-right-width: 10px;
+      //border-image: url('assets/menu-box.png') 7 0 0 0;//
+      //border-right-width: 10px;//
       text-shadow: black 0px 1px 1px;
       font-size: 12pt;
       font-style: italic;
       font-weight: bold;
       font-family: tahoma;
-      padding-right: 15px;
+      //padding-right: 15px;//
     }
   }
   
   #panelCenter {
     color: $panel_center_color;
-    spacing: 4px;
+    //spacing: 40px;//
 
     &:dnd {
       background-gradient-direction: vertical;
@@ -65,7 +132,25 @@
   
   #panelRight{
     color: $panel_right_color;
-    border-image: url('assets/panel-right.png') 7 0 0 0;
+
+    
+    *.panel-top & {
+      border-image: url('assets/panelend-top.png') 30 0 0 0;
+    }
+    
+    *.panel-right & {
+      border-image: url('assets/panelend-right.png') 0 0 30 0;
+    }
+    
+    *.panel-bottom & {
+      border-image: url('assets/panelend-bottom.png') 30 0 0 0;
+    }
+
+    *.panel-left & {
+      border-image: url('assets/panelend-left.png') 0 0 30 0;
+    }
+
+    
     &:dnd {
       background-gradient-direction: vertical;
       background-gradient-start: rgba(0,0,255,0.05);
@@ -161,8 +246,8 @@
   }
   
   .panel-launcher {
-    margin: 1px;
-    padding: 3px;
+    //margin: 1px;//
+    //padding: 3px;//
   }
   
   .panel-launcher:hover {
