@@ -152,58 +152,58 @@ color:$grouped_window_list_fg;
   
 }
 
-&:active:hover,
-&:checked:hover {
-  *.panel-top & {
-    border-image: url('assets/item-box-top-hover.png');
-  }
-  *.panel-bottom & {
-    border-image: url('assets/item-box-bottom-hover.png');
-  }
-  *.panel-left & {
-    border-image: url('assets/item-box-left-hover.png');
-  }
-  *.panel-right & {
-    border-image: url('assets/item-box-right-hover.png');
+  &:active:hover,
+  &:checked:hover {
+    *.panel-top & {
+      border-image: url('assets/item-box-top-hover.png');
+    }
+    *.panel-bottom & {
+      border-image: url('assets/item-box-bottom-hover.png');
+    }
+    *.panel-left & {
+      border-image: url('assets/item-box-left-hover.png');
+    }
+    *.panel-right & {
+      border-image: url('assets/item-box-right-hover.png');
+    }
+
+    transition-duration: 100;
+    
   }
 
-  transition-duration: 100;
-  
-}
+  &:focus {
+    *.panel-top & {
+      border-image: url('assets/item-box-top-active.png');
+    }
+    *.panel-bottom & {
+      border-image: url('assets/item-box-bottom-active.png');
+    }
+    *.panel-left & {
+      border-image: url('assets/item-box-left-active.png');
+    }
+    *.panel-right & {
+      border-image: url('assets/item-box-right-active.png');
+    }
+    transition-duration: 100;
+    color: $grouped_window_list_focus_fg;
+  }
 
-&:focus {
-  *.panel-top & {
-    border-image: url('assets/item-box-top-active.png');
+  &:focus:hover {
+    *.panel-top & {
+      border-image: url('assets/item-box-top-active-hover.png');
+    }
+    *.panel-bottom & {
+      border-image: url('assets/item-box-bottom-active-hover.png');
+    }
+    *.panel-left & {
+      border-image: url('assets/item-box-left-active-hover.png');
+    }
+    *.panel-right & {
+      border-image: url('assets/item-box-right-active-hover.png');
+    }
+    transition-duration: 100;
+    color: $grouped_window_list_focus_fg;
   }
-  *.panel-bottom & {
-    border-image: url('assets/item-box-bottom-active.png');
-  }
-  *.panel-left & {
-    border-image: url('assets/item-box-left-active.png');
-  }
-  *.panel-right & {
-    border-image: url('assets/item-box-right-active.png');
-  }
-  transition-duration: 100;
-  color: $grouped_window_list_focus_fg;
-}
-
-&:focus:hover {
-  *.panel-top & {
-    border-image: url('assets/item-box-top-hover.png');
-  }
-  *.panel-bottom & {
-    border-image: url('assets/item-box-bottom-hover.png');
-  }
-  *.panel-left & {
-    border-image: url('assets/item-box-left-hover.png');
-  }
-  *.panel-right & {
-    border-image: url('assets/item-box-right-hover.png');
-  }
-  transition-duration: 100;
-  color: $grouped_window_list_focus_fg;
-}
 }
 
 
