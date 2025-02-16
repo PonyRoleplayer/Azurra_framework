@@ -9,9 +9,8 @@
     -arrow-base: 40px;
   }
   
-  /* Cinnamon 3.2 fix */
-  .popup-menu,
-  .menu {
+    /* Cinnamon 3.2 fix */
+  /*.popup-menu {
   
     border: solid 1px #aca899;
     background-color: rgba(255, 255, 255, 1);
@@ -19,54 +18,69 @@
     color: #000;
     font-size: 9pt;
     box-shadow: 8px 8px 2px -5px rgba(50,50,45,0.50);
+  }*/
+
+  .menu {
+    margin: 5px;
   }
-  .popup-submenu-menu-item:open {
-    background-color: #4c4c4c;
+
+  .popup-submenu-menu-item {
+    &:open {
+      background-color: $popup_submenu_menu_item_open;
+    }
   }
+
   .popup-sub-menu {
-    background-color: transparent;
-  }
-  .popup-sub-menu .popup-menu-item:ltr {
-    padding-right: 0em;
-  }
-  .popup-sub-menu .popup-menu-item:rtl {
-    padding-left: 0em;
-  }
-  .popup-sub-menu StScrollBar {
-    padding: 4px;
-  }
-  .popup-sub-menu StScrollBar StBin#trough {
-    border-width: 0px;
-  }
-  .popup-sub-menu StScrollBar StBin#vhandle {
-    background-color: #4c4c4c;
-    border-width: 0px;
-  }
-  .popup-combo-menu {
-    background-color: rgba(0,0,0,0.9);
-    padding: 1em 0em;
-    color: #000;
-    font-size: 10.5pt;
-    border: 1px solid #1466c9;
-    border-radius: 0px 0px 8px 0px;
+    background-color: $popup_sub_menu_color;
+    //padding: 1px;
+    & .popup-menu-item:ltr {
+      padding-right: 0em;
+    }
+    & .popup-menu-item:rtl {
+      padding-left: 0em;
+    }
+    & StScrollBar {
+      padding: 4px;
+    }
+    & StScrollBar StBin#trough {
+      border-width: 0px;
+    }
+    & StScrollBar StBin#vhandle {
+      background-color: #4c4c4c;
+      border-width: 0px;
+    }
   }
   /* The remaining popup-menu sizing is all done in ems, so that if you
   * override .popup-menu.font-size, everything else will scale with it.
   */
   .popup-menu-content {
     padding: 1em 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $popup_menu_content_border_color;
+    border-radius: 6px;
+    background-gradient-direction: vertical;
+    background-gradient-start: $popup_menu_content_gradient_start;//#1d4d9c;
+    background-gradient-end: $popup_menu_content_gradient_end;//#5c89c9;
   }
+  
   .popup-menu-item {
     padding: .4em 1.75em;
-    spacing: 1em;
-    border: 2px solid transparent;
-  }
-  .popup-menu-item:active {
-    background-color: #1466c9;
-    color: white;
-  }
-  .popup-menu-item:insensitive {
-    color: #9f9f9f;
+    //spacing: 1em;
+    //border: 2px solid transparent;
+    color: $popup_menu_item_color;
+    &:active {
+      background-color: #1466c9;
+      color: white;
+    }
+    &:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: $popup_menu_item_hover_gradient_start;//#A4D07B;
+      background-gradient-end: $popup_menu_item_hover_gradient_end;//#68A941;
+    }
+    &:insensitive {
+      color: #9f9f9f;
+    }
   }
   .popup-image-menu-item {
   }
@@ -74,11 +88,7 @@
     spacing: 1em;
   }
   .popup-separator-menu-item {
-    -gradient-height: 1px;
-    -gradient-start: rgba(0,0,0,0);
-    -gradient-end: rgba(255,255,255,0.2);
-    background-color: rgba(0,0,0,0.15);
-    box-shadow: 0 1px white;
+    background-color: white;
     height: 1px;
   }
   .popup-alternating-menu-item:alternate {
@@ -90,7 +100,7 @@
     -slider-height: 0.3em;
     -slider-background-color: #666666;
     -slider-border-color: #555555;
-    -slider-active-background-color: #1466c9;
+    -slider-active-background-color: $popup_slider_menu_item_color;
     -slider-active-border-color: #DDDDDD;
     -slider-border-width: 1px;
     -slider-handle-radius: 0.5em;
@@ -99,8 +109,8 @@
     spacing: .5em;
   }
   .popup-inactive-menu-item {
-    font-weight: normal;
-    color: #999;
+    font-weight: bold;
+    color: #FFF;
   }
   .popup-subtitle-menu-item {
     font-weight: bold;
@@ -108,4 +118,5 @@
   .popup-menu-icon {
     icon-size: 1.14em;
   }
+
 }

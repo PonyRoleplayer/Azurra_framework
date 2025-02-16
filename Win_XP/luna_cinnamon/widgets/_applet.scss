@@ -24,6 +24,17 @@
   }
   
   .applet-box {
+    *.panel-bottom &,
+    *.panel-top & {
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+
+    *.panel-left &,
+    *.panel-right & {
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
     //padding-left: 1px;//
     //padding-right: 1px;//
     transition-duration: 300;

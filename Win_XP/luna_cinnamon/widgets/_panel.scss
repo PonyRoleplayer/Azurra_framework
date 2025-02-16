@@ -123,7 +123,7 @@
     color: $panel_center_color;
     //spacing: 40px;//
 
-    &:dnd {
+    &:dnd {//Estos son los que se usan cuando se esta editando
       background-gradient-direction: vertical;
       background-gradient-start: rgba(0,255,0,0.05);
       background-gradient-end: rgba(0,255,0,0.4);
@@ -235,71 +235,5 @@
   .panel-button:checked > .system-status-icon,
   .panel-button:focus > .system-status-icon {
     icon-shadow: black 0px 2px 2px;
-  }
-
- /* ===================================================================
-  * Panel Launchers Applet (panelLaunchers.js)
-  * ===================================================================*/
-  
-  #panel-launchers-box {
-  
-  }
-  
-  .panel-launcher {
-    //margin: 1px;//
-    //padding: 3px;//
-  }
-  
-  .panel-launcher:hover {
-    background-color: rgba(0,0,0,0.5);
-  }
-  
-  .panel-launcher-add-dialog-content-box {
-    padding: 6px;
-    spacing: 20px;
-  }
-  
-  .panel-launcher-add-dialog-content-box-left {
-    padding: 6px;
-    spacing: 20px;
-  }
-  
-  .panel-launcher-add-dialog-content-box-right {
-    padding: 6px;
-    spacing: 10px;
-  }
-  
-  .panel-launcher-add-dialog-entry {
-    padding: 5px;
-    border-radius: 4px;
-    color: rgb(50, 50, 50);
-    border: 1px solid rgba(245,245,245,0.2);
-    background-gradient-start: rgba(200,200,200,0.5);
-    background-gradient-end: rgba(254,254,254,0.5);
-    background-gradient-direction: vertical;
-    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.5);
-    selected-color: black;
-    caret-color: rgb(128, 128, 128);
-    caret-size: 1px;
-    width: 250px;
-    transition-duration: 300;
-  }
-  
-  .panel-launcher-add-dialog-entry:focus,
-  .panel-launcher-add-dialog-entry:hover {
-    border: 1px solid rgba(120,120,120,1);
-    background-gradient-start: rgb(200,200,200);
-    background-gradient-end: white;
-    background-gradient-direction: vertical;
-  }
-  
-  .panel-launcher-add-dialog-entry:hover {
-    transition-duration: 300;
-  }
-  
-  .panel-launcher-add-dialog-entry:focus {
-    color: rgb(64, 64, 64);
-    font-weight: bold;
-    transition-duration: 0;
   }
 }

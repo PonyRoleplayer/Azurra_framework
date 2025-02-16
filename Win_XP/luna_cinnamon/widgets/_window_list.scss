@@ -102,10 +102,10 @@ min-width: 5px;
 
 /* https://github.com/B00merang-Project/Windows-XP/issues/44 */
 .grouped-window-list-thumbnail-menu {
-spacing: 6px;
+/*spacing: 6px;
 padding: 6px 12px 12px 12px;
 border-image: url("assets/menu-bottom.png") 6;
-color: #ffffff;
+color: #ffffff;*/
 }
 
 /* experimental support for grouped window list */
@@ -256,10 +256,10 @@ font-size: 1em;
 }
 
 .grouped-window-list-thumbnail-menu {
-  spacing: 6px;
+  /*spacing: 6px;
     padding: 6px 12px 12px 12px;
   border-image: url("assets/menu-bottom.png") 6;
-  color: #ffffff;
+  color: #ffffff;*/
 }
 
 .grouped-window-list-thumbnail-menu > StBoxLayout {

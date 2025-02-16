@@ -121,6 +121,8 @@ stage {
   }
   
   @include panel();
+
+  @include panel_launcher();
   
   @include overview();
   

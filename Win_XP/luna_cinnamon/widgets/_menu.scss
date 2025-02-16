@@ -4,96 +4,122 @@
   * ===================================================================*/
   
   /* Main menu title */
+
+
+  .menu-background {
+    margin: 0px;
+    & .popup-menu-content {
+      padding: 0px;
+      margin: 0px;
+      border-style: solid;
+      border-color: transparent;
+      border-image: url("assets/menu-border.png") 12 12 67 42;
+      border-top-width: 67px;
+      border-right-width: 2px;
+      border-bottom-width: 42px;
+      border-left-width: 2px;
+    }
+  }
   
   .menu-favorites-box {
-    margin: auto;
-    background-color: #D3E5FA;
-    border: 1px solid #95bdee;
+    margin: 0;
+    background-color: $menu_favourites_box_bg;
+    border: 1px solid $menu_favourites_box_border;
     border-radius: 0px;
-    padding: 0.5em;
-    color: black;
+    padding: 0;
   }
   
-  .menu-background {
-    border: solid 1px transparent;
-    border-image: url("assets/menu-bg.png") 12 12 67 42;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-    padding: 55px 1px 0px 1px;
-  }
+
   
   .menu-favorites-button {
-    padding: 10px;
+    padding: 6px;
     border-radius: 0px;
+
+    &:hover {
+      background-color: $menu_favorites_button_hover_bg;
+    }
+    
   }
   
-  .menu-favorites-button:hover {
-    background-color: #316ac5;
-    color: white;
-  }
   
   .menu-places-box {
     margin: auto;
-    padding: 8px;
-    border: 0px solid #666;
+    padding: 1px;
+    border: 1px solid #666;
   }
   
   .menu-places-button {
-    padding: 10px;
+    padding: 1px;
   }
   
   .menu-categories-box {
-    padding: 10px;
+    padding: 0px;
+    border-right: 1px solid $menu_categories_box_border;
   }
   
   .menu-applications-box {
-    padding: 10px 0px 0px 10px;
-    background-color: white;
-    border: none;
+    padding: 0px;
+    background-color: $menu_applications_box_bg;
+
+    & StScrollBar {
+      padding: 0px;
+    }
+    
+    & StScrollView {
+      border: 0px solid #305496;
+      border-image: none;
+      border-right-width: 0px;
+    }
+    
+    
+    & StBin#trough {
+      background: none;
+      border-width: 0px;
+      box-shadow: none;
+      border-image: url('assets/trough-scrollbar-vert.png') 1;
+    }
+    
+    & StButton#vhandle {
+      border-image: url('assets/slider-vert.png') 3;
+      background: url('assets/handle-vert.png') no-repeat center center;
+    }
+    
+    & StButton#vhandle:hover {
+      border-image: url('assets/slider-vert-hover.png') 3;
+      background: url('assets/handle-vert.png') no-repeat center center;
+    }
   }
   
   .menu-applications-inner-box {
-    padding: 5px;
-    background-color: #d3e5fa;
-  }
-  
-  .menu-applications-box StScrollBar {
     padding: 0px;
+    border-top: 0px solid $menu_applications_inner_box_border;
+    border-right: 0px solid $menu_applications_inner_box_border;
+    border-left: 1px solid $menu_applications_inner_box_border;
+    background-color: $menu_applications_inner_box_bg;
+
+    & .popup-menu-item {
+      color: $menu-applications-inner-box-popup-menu-item-fg;
+      &:hover {
+        background-gradient-direction: none;
+        color: $menu-applications-inner-box-popup-menu-item-hover-fg;
+        background-color: $menu-applications-inner-box-popup-menu-item-hover-bg;
+      }
+    }
   }
   
-  .menu-applications-box StScrollView {
-    border: 0px solid #305496;
-    border-image: none;
-    border-right-width: 0px;
-  }
-  
-  
-  .menu-applications-box StBin#trough {
-    background: none;
-    border-width: 0px;
-    box-shadow: none;
-    border-image: url('assets/trough-scrollbar-vert.png') 1;
-  }
-  
-  .menu-applications-box StButton#vhandle {
-    border-image: url('assets/slider-vert.png') 3;
-    background: url('assets/handle-vert.png') no-repeat center center;
-  }
-  
-  .menu-applications-box StButton#vhandle:hover {
-    border-image: url('assets/slider-vert-hover.png') 3;
-    background: url('assets/handle-vert.png') no-repeat center center;
-  }
+
   
   .menu-application-button {
-    padding: 7px;
-    max-width: 10px;
-    color: black;
+    padding: 3px;
+    margin: 1px 6px 1px 6px;
+    color: $menu-application-button-fg;
   }
   
   .menu-application-button-selected {
-    padding: 7px;
-    color: white;
-    background-color: #335ea8;
+    padding: 3px;
+    margin: 1px 6px 1px 6px;
+    color: $menu_application_button_selected_fg;
+    background-color: $menu_application_button_selected_bg;
   }
   
   .menu-application-button-label:ltr {
@@ -105,19 +131,22 @@
   }
   
   .menu-category-button {
-    padding: 7px;
-    color: black;
+    padding: 6px;
+    margin: 1px 6px 1px 6px;
+    color: $menu_category_button_fg;
   }
   
   .menu-category-button-greyed {
-    padding: 7px;
+    padding: 6px;
+    margin: 1px 6px 1px 6px;
     color: #808080;
   }
   
   .menu-category-button-selected {
-    padding: 7px;
-    color: white;
-    background-color: #335ea8;
+    padding: 6px;
+    margin: 1px 6px 1px 6px;
+    color: $menu_category_button_selected_fg;
+    background-color: $menu_category_button_selected_bg;
   }
   
   .menu-category-button-label:ltr {
@@ -136,7 +165,9 @@
     padding-right: 30px;
     padding-left: 28px;
     text-align: right;
-    color: black;
+    color: $menu_selected_app_box_fg;
+    background-color: $menu_selected_app_box_bg;
+    border-top: 1px solid $menu_selected_app_box_border;
   }
   
   .menu-selected-app-title {
@@ -146,28 +177,26 @@
   .menu-selected-app-description {
     max-width: 150px;
   }
-  #menu-search-entry, #menu-search-entry:hover, #menu-search-entry:focus {
-    padding: 5px 6px;
-    color: #000;
-    font: 9pt;
-    height: 18px;
-    width: 250px;
-    selected-color: white;
-    caret-color: #000;
-    background-color: white;
-    caret-size: 1px;
-    margin-bottom: 10px;
-    border: 1px solid gray;
-  }
-  
+
   .menu-search-box {
-    padding-left: 20px;
-    padding-bottom: 10px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+
+  #menu-search-entry, 
+  #menu-search-entry:hover,
+  #menu-search-entry:focus {
+    padding: 6px;
+    color: black;
+    background-color: #ffffff;
+    selected-color: #ffffff;
+    selection-background-color: #316ac5;
+    border: 1px solid gray;
   }
   
   .menu-search-entry-icon {
     icon-size: 1em;
-    color: #000;
   }
   
   /* Context menu (at the moment only for favorites) */
