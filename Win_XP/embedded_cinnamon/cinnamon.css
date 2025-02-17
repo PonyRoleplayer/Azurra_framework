@@ -124,11 +124,14 @@ StScrollBar StButton#vhandle:hover {
 .menu {
   margin: 5px; }
 
-.popup-submenu-menu-item:open {
-  background-color: #68A941; }
+.popup-submenu-menu-item {
+  margin: 0px 6px 0px 6px; }
+  .popup-submenu-menu-item:open {
+    color: white;
+    background-color: #3e9de8; }
 
 .popup-sub-menu {
-  background-color: #A4D07B; }
+  margin: 0px 6px 0px 6px; }
   .popup-sub-menu .popup-menu-item:ltr {
     padding-right: 0em; }
   .popup-sub-menu .popup-menu-item:rtl {
@@ -147,23 +150,20 @@ StScrollBar StButton#vhandle:hover {
 .popup-menu-content {
   padding: 1em 0;
   border-style: solid;
-  border-width: 1px;
-  border-color: #FFF;
+  border-width: 2px;
+  border-color: #0e558d;
   border-radius: 6px;
-  background-gradient-direction: vertical;
-  background-gradient-start: #1d649c;
-  background-gradient-end: #054c84; }
+  background-color: #2e75ad; }
 
 .popup-menu-item {
   padding: .4em 1.75em;
-  color: #FFF; }
+  margin: 0px 6px 0px 6px;
+  color: white; }
   .popup-menu-item:active {
-    background-color: #1466c9;
-    color: white; }
+    background-color: #1466c9; }
   .popup-menu-item:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: #A4D07B;
-    background-gradient-end: #68A941; }
+    background-color: #3e9de8;
+    color: white; }
   .popup-menu-item:insensitive {
     color: #9f9f9f; }
 
@@ -171,7 +171,7 @@ StScrollBar StButton#vhandle:hover {
   spacing: 1em; }
 
 .popup-separator-menu-item {
-  background-color: white;
+  background-color: #0e558d;
   height: 1px; }
 
 .popup-alternating-menu-item:alternate {
@@ -1574,9 +1574,7 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   width: 300px;
   padding: 15px;
   spacing: 0.5em;
-  background-gradient-direction: vertical;
-  background-gradient-start: #A4D07B;
-  background-gradient-end: #68A941;
+  background-color: red;
   color: #FFF; }
 
 .sound-player-overlay StBoxLayout {
