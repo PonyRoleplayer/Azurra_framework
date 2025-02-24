@@ -21,7 +21,8 @@
   }*/
 
   .menu {
-    margin: 5px;
+    margin: 8px;
+    
   }
 
   .popup-submenu-menu-item {
@@ -64,6 +65,9 @@
     border-color: $popup_menu_content_border;
     border-radius: 6px;
     background-color: $popup_menu_content_bg;
+    //box-shadow: 0px 8px 24px rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 6px 4px rgba(0, 0, 0, 0.6);
+    color: $popup_menu_context_fg;
   }
   
   .popup-menu-item {
@@ -72,7 +76,6 @@
     color: $popup_menu_item_fg;
     &:active {
       background-color: #1466c9;
-      //color: white;
     }
     &:hover {
       background-color: $popup-menu-item-hover-bg;
@@ -110,7 +113,7 @@
   }
   .popup-inactive-menu-item {
     font-weight: bold;
-    color: #FFF;
+    color: $popup_inactive_menu_item_fg;
   }
   .popup-subtitle-menu-item {
     font-weight: bold;
