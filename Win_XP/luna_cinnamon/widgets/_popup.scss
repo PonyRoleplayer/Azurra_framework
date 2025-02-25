@@ -78,8 +78,8 @@
       background-color: #1466c9;
     }
     &:hover {
-      background-color: $popup-menu-item-hover-bg;
-      color: $popup-menu-item-hover-fg;
+      background-color: $popup_menu_item_hover_bg;
+      color: $popup_menu_item_hover_fg;
     }
     &:insensitive {
       color: #9f9f9f;

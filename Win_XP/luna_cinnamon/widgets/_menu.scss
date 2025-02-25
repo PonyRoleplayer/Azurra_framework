@@ -99,11 +99,11 @@
     background-color: $menu_applications_inner_box_bg;
 
     & .popup-menu-item {
-      color: $menu-applications-inner-box-popup-menu-item-fg;
+      color: $menu_applications_inner_box_popup_menu_item_fg;
       &:hover {
         background-gradient-direction: none;
-        color: $menu-applications-inner-box-popup-menu-item-hover-fg;
-        background-color: $menu-applications-inner-box-popup-menu-item-hover-bg;
+        color: $menu_applications_inner_box_popup_menu_item_hover_fg;
+        background-color: $menu_applications_inner_box_popup_menu_item_hover_bg;
       }
     }
   }
@@ -113,7 +113,7 @@
   .menu-application-button {
     padding: 3px;
     margin: 1px 6px 1px 6px;
-    color: $menu-application-button-fg;
+    color: $menu_application_button_fg;
   }
   
   .menu-application-button-selected {
