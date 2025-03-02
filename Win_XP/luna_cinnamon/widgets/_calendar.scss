@@ -13,7 +13,7 @@
 }
 
 .calendar-background {
-    border-radius: 6px;
+    /*border-radius: 6px;
     border-width: 1px;
     border-color: white;
     color: white;
@@ -34,7 +34,7 @@
         background-color: white;
         //box-shadow: 0 1px white;
         height: 1px;
-    }
+    }*/
 }
 
 .calendar-cinnamon-org-applet .applet-label {
@@ -43,13 +43,16 @@
 }
 
 .calendar {
-    spacing-rows: 0px;
+    background-color: $calendar_bg;
+    color: $calendar_fg;
+    border: 1px solid $calendar_border;
+    /*spacing-rows: 0px;
     spacing-columns: 0px;
     border-width: 1px;
     border-color: #002d96;
     margin: 0px;
     padding:2px;
-    background-color: white;
+    background-color: white;*/
 
     & StBoxLayout {
         background-color: #9ebef5;
@@ -58,123 +61,122 @@
 
 
 .calendar-events-main-box {
-  margin: 0px 10px 0px 0px;
-  height: 300px;
+  //margin: 0px 10px 0px 0px;
+  min-height: 300px;
   min-width: 350px;
 
-  padding: 10px;
-  border: 1px solid #002d96;
-    background-color: #fff4bc;
+  padding: 6px;
+  border: 1px solid $calendar_events_main_box_border;
+  background-color: $calendar_events_main_box_bg;
+  color: $calendar_events_main_box_fg;
 
-  & .separator {
-   background: unset;
-  }
+  margin: 0 6px 0 0;
 }
 
 .calendar-events-no-events-box {
 }
 
 .calendar-events-no-events-button {
-    color: #cccccc;
-    padding: 7px;
+    //color: #cccccc;
+    //padding: 7px;
 }
 
 .calendar-events-no-events-button:hover:active {
 }
 
 .calendar-events-no-events-button:hover {
-    background-gradient-direction: vertical;
+    /*background-gradient-direction: vertical;
     background-gradient-start: rgba(90, 90, 90, 0.5);
-    background-gradient-end: rgba(70, 70, 70, 0.5);
-    box-shadow: inset 0px 0px 1px 1px rgba(120, 120, 120, 1);
-    border-radius: 4px;
+    background-gradient-end: rgba(70, 70, 70, 0.5);*/
+    //box-shadow: inset 0px 0px 1px 1px rgba(120, 120, 120, 1);
+    //border-radius: 4px;
 }
 
 .calendar-events-no-events-icon {
-    color: black;
+    //color: black;
 }
 
 .calendar-events-no-events-label {
-    font-weight: bold;
-    text-align: center;
-    color: black;
+    //font-weight: bold;
+    //text-align: center;
+    //color: black;
 }
 
 .calendar-events-date-label {
-  padding: .1em .1em .5em .1em;
-  font-weight: bold;
-  text-align: center;
-  color:black;
+  //padding: .1em .1em .5em .1em;
+  //font-weight: bold;
+  //text-align: center;
+  //color:black;
 }
 
 
 
 .calendar-events-event-container {
-    padding:  0;
+    //padding:  0;
 }
 
 .calendar-event-button {
-    margin: 7px;
-    background-color: white;
-    border: 1px solid black;
+    background-color: $calendar_event_button_bg;
+    border: 1px solid $calendar_event_button_border;
+    color: $calendar_event_button_fg;
     &:hover {
         box-shadow: inset 0px 0px 1px 1px rgba(120, 120, 120, 1);
     }
 }
 
 .calendar-event-row-content {
-    padding: 7px;
-    margin: 2px 7px 2px 7px;
+    //padding: 7px;
+    //margin: 2px 7px 2px 7px;
 }
 
 .calendar-event-time-past {
-    color: grey;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: .2em;
+    color: $calendar_event_time_past_fg;
+    //font-weight: bold;
+    //text-align: left;
+    //margin-bottom: .2em;
 }
 .calendar-event-time-present {
-    color: black;
+    color: $calendar_event_time_present_fg;
     font-weight: bold;
-    text-align: left;
-    margin-bottom: .2em;
+    //text-align: left;
+    //margin-bottom: .2em;
 }
 
 .calendar-event-time-present:all-day {
-    color: rgba(0, 170, 0, 0.6);
+    //color: rgba(0, 170, 0, 0.6);
 }
 
 .calendar-event-time-future {
-    color: black;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: .2em;
+    color: $calendar_event_time_future_fg;
+    //text-align: left;
+    //margin-bottom: .2em;
 }
 
 .calendar-event-summary {
-    color: black;
-    text-align: left;
-    width: 200px;
-    padding-bottom: 2px;
+    color: $calendar_event_summary_fg;
+    //text-align: left;
+    //width: 200px;
+    //padding-bottom: 2px;
 }
 
 .calendar-event-countdown {
-    text-align: right;
-    margin-bottom: .6em;
+    font-weight: bold;
+    color: $calendar_event_countdown_fg;
 }
 
 .calendar-event-countdown:soon {
-      font-weight: bold;
+    font-weight: bold;
+    color: $calendar_event_countdown_soon_fg;
 }
 
 .calendar-event-countdown:imminent {
-      font-weight: bold;
-      color: #d2aa1e;
+    font-weight: bold;
+    color: $calendar_event_countdown_imminent_fg;
 }
 
 .calendar-event-countdown:current {
-      font-weight: bold;
-    color: rgba(0,255,0,0.6);
+    font-weight: bold;
+    color: $calendar_event_countdown_current_fg;
 }
 
 .calendar-event-button:hover .calendar-event-time-past,
@@ -188,14 +190,13 @@
 }
 
 .calendar-event-color-strip {
-  width: 4px;
-  border-width: 1px;
-  border-radius: 4px 0 0 4px;
+  //width: 4px;
+  //border-width: 1px;
+  //border-radius: 4px 0 0 4px;
 }
 
 
 .calendar-month-label {
-    color: black;
     font-size: 1em;
     padding-bottom: 8px;
     padding-top: 8px;
@@ -211,17 +212,18 @@
     border: none;
 
 
+
     &:rtl {
         background-image: url("assets/calendar-arrow-right.svg");
     }
     
     &:hover {
-        background-color: #B5E089;
+        //background-color: #B5E089;
         border: none;
     }
     
     &:active {
-        background-color: #79B94D;
+        //background-color: #79B94D;
         border:none;
     }
 
@@ -235,18 +237,17 @@
     border-radius: 4px;
     border: none;
 
-
     &:rtl {
         background-image: url("assets/calendar-arrow-left.svg");
     }
     
     &:hover {
-        background-color: #B5E089;
+        //background-color: #B5E089;
         border: none;
     }
     
     &:active {
-        background-color: #79B94D;
+        //background-color: #79B94D;
         border:none;
     }
 }
@@ -256,20 +257,21 @@
 .calendar-today-home-button-enabled {
     padding: 7px;
     margin-top: 15px;
-    color: #002d96;
+    
+    color: $calendar_today_home_button_fg;
 }
 
 .calendar-today-home-button-enabled:hover {
     padding: 7px;
-    background-gradient-direction: vertical;
+    /*background-gradient-direction: vertical;
     background-gradient-start: rgba(181, 224, 137, 0.8);
-    background-gradient-end: rgba(121, 185, 77, 0.8);
+    background-gradient-end: rgba(121, 185, 77, 0.8);*/
     //box-shadow: inset 0px 0px 1px 1px rgba(120, 120, 120, 1);
     border-radius: 4px;
 }
 
 .calendar-today-day-label {
-    color: white;
+    //color: white;
     font-size: 1.75em;
     font-weight: bold;
     text-align: center;
@@ -277,7 +279,7 @@
 }
 
 .calendar-today-date-label {
-    color: white;
+    //color: white;
     font-size: 1.1em;
     font-weight: bold;
     text-align: center;
@@ -287,25 +289,28 @@
 .calendar-day-event-dot-box {
   margin-top: 1.7em;
   max-rows: 1;
+  align-content: center;
 }
 
 .calendar-day-event-dot {
-  margin: 1px;
+  margin: 5px 1px 0 1px;
   border-radius: 2px;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
+  
 }
 
 .calendar-day-base {
-    font-size: 1em;
-    text-align: center;
-    align-items: center;
-    width: 2.4em;
-    height: 2.4em;
+    width: 2.5em; 
+    height: 2em; 
+    padding: 2px; 
+
+    color: $calendar_day_base_fg;
+    background-color: $calendar_day_base_bg;
 
     &:hover {
-        background-color: #79B94D;
-        color: #fff;
+        color: $calendar_day_base_hover_fg;
+        background-color: $calendar_day_base_hover_bg;
     }
     
     &:active {
@@ -314,68 +319,98 @@
 
 
 .calendar-day-heading {
-    color: black;
     padding-top: 1em;
+    text-align: center;
+    align-content: center;
+    font-weight: bold; 
+
 }
 
 .calendar-week-number {
-    color: black;
-    font-weight: bold;
-    font-size: 1em;
-    align-items: center;
-    align-self: center;
-    align-content: center;
+    width: 2.5em; 
+    height: 2em; 
+    margin: 2px; 
+    padding: 0.75em 0 0; 
+    background-color: transparent; 
+    color: $calendar_week_number_fg;
+    font-weight: bold; 
+    font-size: inherit; 
+    text-align: center;
 }
 
 /* Hack used in lieu of border-collapse - see calendar.js */
 .calendar-day {
-    //border: 1px solid rgba(90, 90, 90, 1);
-    color: black;
-    border-top-width: 0;
-    border-left-width: 0;
+    border: 1px solid $calendar_day_border;
+    
+    //color: black;
+    //border-top-width: 0;
+    //border-left-width: 0;
 }
 
 .calendar-day-top {
-    border-top-width: 1px;
+    //border-top-width: 1px;
 }
 
 .calendar-day-left {
-    border-left-width: 1px;
+    //border-left-width: 1px;
 }
 
 .calendar-work-day {
 }
 
 .calendar-nonwork-day {
-    background-color: rgba(128, 128, 128, 0.2);
+    background-color: $calendar_nonwork_day_bg;
+    
 }
 
 .calendar-today {
-    text-shadow: black 0px 2px 2px;
+    /*outline-width: 1px;
+    outline-style: solid;
+    outline-color: $calendar_today_outline;*/
+    background-color: white;
+    border: 1px solid $calendar_today_border;
+    //box-shadow: inset 0px 0px 0px 2px red;
+    
+    /*text-shadow: black 0px 2px 2px;
     color: #ffffff;
     background-gradient-direction: vertical;
     background-gradient-start: #B5E089;
     background-gradient-end: #79B94D;
-    box-shadow: inset 0px 0px 0px 1px rgba(120, 120, 120, 1);
+    box-shadow: inset 0px 0px 0px 1px rgba(120, 120, 120, 1);*/
     
     &:selected {
         font-weight: bold;
+        color: $calendar_today_selected_fg;
+        background-color: $calendar_today_selected_bg;
+        //box-shadow: inset 0px 0px 0px 2px red;
     }
 }
 
 
 .calendar-other-month-day {
-    color: #888888;
+    //background-color: purple;
+    //color: yellow;
+    border: 1px solid $calendar_other_month_day_border;
+    color: $calendar_other_month_day_fg;
 }
 
-.calendar-not-today:selected {
-    background-color: #B5E089;
+.calendar-not-today {
+
+    &:selected {
+        outline-width: 1px;
+        outline-style: dashed;
+        outline-color: $calendar_not_today_selected_outline;
+        color: $calendar_not_today_selected_fg;
+        background-color: $calendar_not_today_selected_bg;
+        font-weight: bold;
+    }
+    /*background-color: #B5E089;
     color: #fff;
     font-weight: bold;
 
     &:hover {
         background-color: #79B94D;
-    }
+    }*/
 
 }
 }
