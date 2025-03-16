@@ -1,0 +1,136 @@
+@mixin dialog() {
+
+    .dialog {
+        
+        background-gradient-start: $dialog_background_gradient_start;//#5a7dde;
+        background-gradient-end: $dialog_background_gradient_end;//#98b6f5;
+        background-gradient-direction: horizontal;
+        /*border-top: 45px;
+        border-bottom: 45px;
+        border-style: solid;
+        border-color: #003399;*/
+
+        border-style: solid;
+        border-color: transparent;
+        border-image: url("assets/dialog-bg.png") 1 1 45 43;
+        border-top-width: 45px;
+        //border-right-width: 1px;
+        border-bottom-width: 43px;
+        //border-left-width: 1px;
+
+
+        color: $dialog_fg;
+        padding: 6px;
+        //min-height: 200px;
+        //min-width: 315px;
+
+        & .dialog-button {
+
+            color: black;
+            padding: 3px 6px 3px 6px;
+            border: 1px solid #003c74;
+            border-radius: 3px;
+            background-color: #f6f6f2;
+            box-shadow: inset -3px -3px 2px #d6d0c5;
+
+            /*background-gradient-start: #f9fdff;
+            background-gradient-end: #a6b8cf;
+            background-gradient-direction: vertical;*/
+    
+            &:default {
+                //border-image: url("assets/dialog-button-default.png") 4;
+            }
+        
+            &:destructive-action {
+                /*color: white;
+                border: 1px solid white;
+                border-radius: 3px;
+                background-color: red;*/
+                //box-shadow: inset -3px -3px 2px #d6d0c5;
+            }
+    
+
+            &:focus {
+                box-shadow: inset 0px 0px 2px 2px #8eafe6;
+                //border-image: url("assets/dialog-button-focus.png") 4;
+            }
+        
+            &:hover {
+                box-shadow: inset 0px 0px 2px 2px #e59700;
+                //border-image: url("assets/dialog-button-hover.png") 4;
+            }
+        
+            &:active {
+                background-color: #e3e2da;
+                box-shadow: inset 2px 2px 2px #d0cbbf;
+                //border-image: url("assets/dialog-button-pressed.png") 4;
+            }
+        
+            &:checked {
+                background-color: #e3e2da;
+                box-shadow: inset 2px 2px 2px #d0cbbf;
+                //border-image: url("assets/dialog-button-pressed.png") 4;
+            }
+        
+            &:insensitive {
+                border: 1px solid #c9c7ba;
+                background-color: #f5f4ea;
+                box-shadow: none;
+                color: grey;
+                //border-image: url("assets/dialog-button-disabled.png") 4;
+            }
+        }
+    }
+
+
+    .prompt-dialog-password-entry {
+        padding: 4px 12px;
+        color: black;
+        background: white;
+        border: 1px solid grey;
+        border-radius: 0px;
+        caret-color: black;
+        caret-size: 1px;
+        width: 250px;
+        transition-duration: 300;
+        selection-background-color: blue;
+
+        &:focus {
+            border: 1px solid blue;
+        }
+
+        & .capslock-warning {
+            icon-size: 16px;
+            warning-color: red;
+            padding: 0 4px;
+        }
+
+        & .hint-text {
+            color: grey;
+        }
+
+        & .peek-password {
+            color: black;
+            icon-size: 16px;
+        }
+    }
+
+    .user-icon {
+        //border-image: url("assets/frame.png") 4 4 4 4;
+        border-style: solid;
+        border-color: transparent;
+        border-image: url("assets/frame.png") 0 0 8 8;
+        border-top-width: 4px;
+        border-right-width: 4px;
+        border-bottom-width: 4px;
+        border-left-width: 4px;
+
+    }
+    
+
+    
+
+
+}
+
+

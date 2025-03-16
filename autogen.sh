@@ -83,6 +83,7 @@ deploy() {
 
   if has_cinnamon; then
     cp $1/cinnamon*.css "$target_dir"
+    cp $1/thumbnail.png "$target_dir"
   else
     cp $1/gtk*.css "$target_dir"
   fi
