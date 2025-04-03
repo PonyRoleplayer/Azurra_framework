@@ -9,7 +9,7 @@
       border: none;
       border-radius: 0;
       background-color: $selected_bg_color;
-      background-image: linear-gradient(to right, transparent, transparent 37.5%, white 37.5%, white 50%, transparent 50%, transparent 87.5%, white 87.5%, white 100%), linear-gradient(to bottom, gtkmix($selected_bg_color, #adefad, 0.95), gtkmix($selected_bg_color, #29d329, 0.95) 60%, gtkmix($selected_bg_color, #adefad, 0.95));
+      background-image: get_progressbar_progress_bg_image($selected_bg_color);
       background-size: 16px 16px, auto;
 
       &:backdrop {
@@ -29,7 +29,7 @@
     
     &.vertical {
       progress {
-        background-image: linear-gradient(to bottom, transparent, transparent 37.5%, white 37.5%, white 50%, transparent 50%, transparent 87.5%, white 87.5%, white 100%), linear-gradient(to right, gtkmix($selected_bg_color, #adefad, 0.95), gtkmix($selected_bg_color, #29d329, 0.95) 60%, gtkmix($selected_bg_color, #adefad, 0.95));
+        background-image: get_progressbar_progress_vertical_bg_image($selected_bg_color);
         background-size: 16px 16px, auto;
       }
       

@@ -1,9 +1,12 @@
 @mixin toolbar() {
   toolbar {
     padding: 4px;
-    border: none;
+
     color: $toolbar_fg_color;
     background-color: $toolbar_bg_color;
+
+    border-top: 1px solid $bar_top_border;//#ffffff;
+    border-bottom: 1px solid $bar_bottom_border;//#d8d2bd;
 
     &:backdrop {
       color: $unfocused_fg_color;

@@ -1,3 +1,5 @@
+@import 'colors';
+
 $roundness : 2px;
 $entry_radius : 0px;
 $button_radius : 2px;
@@ -17,3 +19,6 @@ $menu_radius : 0px;
 $outline_width : 1px;
 $outline_offset : -3px;
 $outline_style : dashed;
+
+//$var_button_background_image: linear-gradient(to bottom, rgba(252,252,252,1) 0%,rgba(235,235,235,1) 50%,rgba(221,221,221,1) 51%,rgba(174,174,174,1) 100%);
+//$var_button_border: 1px solid gtkmix(gtkshade($br, 0.3), $selected_bg_color, 0.25);
